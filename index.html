@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty Data Analysis</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<style>
+  a {
+  pointer-events: auto;
+}
+</style>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#faculty-data">Faculty Data</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Welcome to Faculty Data Analysis</h1>
+      <p>This website allows faculty members to analyze their data and gain insights into their research and publications.</p>
+    </section>
+    <section id="faculty-data">
+      <h1>Faculty Data</h1>
+     
+      <div id="filter-container">
+        <label for="department-filter">Filter by Department:</label>
+        <select id="department-filter">
+          <option value="">All Departments</option>
+          <option value="">Computer Engineering</option>
+          <option value="">CSE(DS)</option>
+          <option value="">IT</option>
+          <option value="">EXTC</option>
+       
+         
+
+        </option>          
+        </select>
+        <label for="Semester">Semester:</label>
+        <select id="Semester">
+         
+         
+          <option value="sem 1">sem 1</option>
+          <option value="">sem 2</option>
+          <option value="">sem 3</option>
+          <option value="">sem 4</option>
+           
+           
+       
+         
+        <select>
+      </div>
+      <div id="search-container">
+        <label for="Name of faculty">Name of Faculty:</label>
+        <select id="Name_of_Faculty">
+           <!-- <option> -->
+            <!-- <a href="https://www.w3schools.com/"></a>abcv</option> -->
+            <option value="1" data-href="Chameleon2 (1).html">Select</option>
+            <option value="2" data-href="Chameleon2.html">Anil Pandit</option>
+            <option value="3" data-href="chameleon1.html">Sunil Kadke</a></option>
+            <option value="4" data-href="Chameleon3.html">Mahi Anil Patotkar</option>
+            <option value="5" data-href="Chameleon4.html">Rakhi S. Vikrant</option>
+      </div>
+    </section>
+    <div>
+    <section id="about">
+     <header> <h1>About</h1></header>
+      <p>This website is designed to help faculty members analyze their data and gain insights into their research and publications.</p>
+    </section>
+    </div>
+    <div>
+    <section id="contact">
+     <header> <h1>Contact</h1></header>
+      <p>If you have any questions or feedback, please contact us at [insert contact email].</p>
+    </section>
+    </div>
+  </main>
+  <!--script src="FDA.js"></script-->
+  <script>
+  const selectElement = document.getElementById('Name_of_Faculty');
+
+  // Add event listener for change event
+  selectElement.addEventListener('change', function() {
+    // Get the selected option
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+   
+    // Get the href from the data-href attribute
+    const href = selectedOption.getAttribute('data-href');
+   
+    // If href exists, redirect
+   
+if (href) {
+ window.open(href, '_blank');  // Open in a new tab
+}
+  });
+
+  </script>
+ 
+</body>
+</html>
